@@ -258,6 +258,27 @@ button:hover {
     grid-auto-rows: 400px;
     gap: 10px;
 }
+.imageGallery-card:nth-of-type(1) {
+    background-image: url("./assets/images/macaron.jpg");
+}
+.imageGallery-card:nth-of-type(2) {
+    background-image: url("./assets/images/falling-donuts.jpg");
+}
+.imageGallery-card:nth-of-type(3) {
+    background-image: url("./assets/images/front-view-chocolate-cake.jpg");
+}
+.imageGallery-card:nth-of-type(4) {
+    background-image: url("./assets/images/chocolate-mousse-cups.jpg");
+}
+.imageGallery-card:nth-of-type(5) {
+    background-image: url("./assets/images/pancakes.jpg");
+}
+.imageGallery-card:nth-of-type(6) {
+    background-image: url("./assets/images/cookies.jpeg");
+}
+.imageGallery-card:nth-of-type(7) {
+    background-image: url("./assets/images/high-angle-chocolate-cake.jpg");
+}
 .imageGallery-card {
     background-position: center;
     background-size: cover;

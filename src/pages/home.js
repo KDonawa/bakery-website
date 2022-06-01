@@ -30,25 +30,13 @@ function getHomePage() {
         <div class="spacing"></div>
 
         <section class="home-imageGallery">
-            <div class="imageGallery-card" style="background-image: url(../src/assets/images/macaron.jpg)"></div>
-            <div
-                class="imageGallery-card"
-                style="background-image: url(../src/assets/images/falling-donuts.jpg)"
-            ></div>
-            <div
-                class="imageGallery-card card-tall"
-                style="background-image: url(../src/assets/images/front-view-chocolate-cake.jpg)"
-            ></div>
-            <div
-                class="imageGallery-card"
-                style="background-image: url(../src/assets/images/chocolate-mousse-cups.jpg)"
-            ></div>
-            <div class="imageGallery-card" style="background-image: url(../src/assets/images/pancakes.jpg)"></div>
-            <div class="imageGallery-card" style="background-image: url(../src/assets/images/cookies.jpeg)"></div>
-            <div
-                class="imageGallery-card"
-                style="background-image: url(../src/assets/images/high-angle-chocolate-cake.jpg)"
-            ></div>
+            <div class="imageGallery-card"></div>
+            <div class="imageGallery-card"></div>
+            <div class="imageGallery-card card-tall"></div>
+            <div class="imageGallery-card"></div>
+            <div class="imageGallery-card"></div>
+            <div class="imageGallery-card"></div>
+            <div class="imageGallery-card"></div>
         </section>
 
         <div class="spacing"></div>
