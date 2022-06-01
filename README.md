@@ -1,4 +1,4 @@
-# Calculator
+# Restaurant Page
 
 [Live Demo](https://kdonawa.github.io/restaurant-page/) :point_left:
 
@@ -13,7 +13,7 @@ Created with HTML, CSS, JS and Webpack
   &emsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="25" height="25"/>
   &emsp;
-  <img src="https://img.icons8.com/color/48/undefined/webpack.png"/>
+  <img src="https://img.icons8.com/color/48/undefined/webpack.png" alt="webpack" width="32" height="32"//>
 </div>
 
 ## Future Improvements
