@@ -1,8 +1,4 @@
-function loadHome(container) {
-    container.innerHTML = getHomePage();
-}
-
-function getHomePage() {
+export default function getHomePage() {
     return `
         <section class="home-mainPage">
             <div class="home-headline">
@@ -92,5 +88,3 @@ function getHomePage() {
         </section>
     `;
 }
-
-export default loadHome;

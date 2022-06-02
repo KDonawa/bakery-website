@@ -1,37 +1,55 @@
-import "./style.css";
+import header from "./components/header";
+import footer from "./components/footer";
 import home from "./pages/home";
 import about from "./pages/about";
 import menu from "./pages/menu";
 import contact from "./pages/contact";
 
 let activeBtn = null;
-const container = document.getElementById("content");
+const content = document.createElement("section");
 
-const homeBtn = document.getElementById("navHomeBtn");
-const aboutBtn = document.getElementById("navAboutBtn");
-const menuBtn = document.getElementById("navMenuBtn");
-const contactBtn = document.getElementById("navContactBtn");
+// initial load of home page content
+(() => {
+    const homeContent = createSection(home());
+    content.appendChild(homeContent);
+    document.body.append(header, content, footer);
 
-homeBtn.addEventListener("click", () => load(home, homeBtn));
-aboutBtn.addEventListener("click", () => load(about, aboutBtn));
-menuBtn.addEventListener("click", () => load(menu, menuBtn));
-contactBtn.addEventListener("click", () => load(contact, contactBtn));
+    const homeBtn = document.getElementById("navHomeBtn");
+    toggleNavButtonActive(homeBtn);
+    homeBtn.addEventListener("click", () => loadPage(homeContent, homeBtn));
+})();
 
-function load(fn, btn) {
+// secondary load
+(() => {
+    const aboutContent = createSection(about());
+    const menuContent = createSection(menu());
+    const contactContent = createSection(contact());
+
+    const aboutBtn = document.getElementById("navAboutBtn");
+    const menuBtn = document.getElementById("navMenuBtn");
+    const contactBtn = document.getElementById("navContactBtn");
+
+    aboutBtn.addEventListener("click", () => loadPage(aboutContent, aboutBtn));
+    menuBtn.addEventListener("click", () => loadPage(menuContent, menuBtn));
+    contactBtn.addEventListener("click", () => loadPage(contactContent, contactBtn));
+
+    document.getElementById("reservationBtn").addEventListener("click", () => loadPage(contactContent, contactBtn));
+    document.getElementById("learnMoreBtn").addEventListener("click", () => loadPage(aboutContent, aboutBtn));
+    document.getElementById("homeMenuBtn").addEventListener("click", () => loadPage(menuContent, menuBtn));
+})();
+
+function loadPage(pageContent, btn) {
     window.scrollTo(0, 0);
     if (activeBtn === btn) return;
 
-    fn(container);
-    updateNavBar(btn);
-
-    if (btn === homeBtn) {
-        document.getElementById("reservationBtn").addEventListener("click", () => load(contact, contactBtn));
-        document.getElementById("learnMoreBtn").addEventListener("click", () => load(about, aboutBtn));
-        document.getElementById("homeMenuBtn").addEventListener("click", () => load(menu, menuBtn));
-    }
+    content.textContent = "";
+    content.appendChild(pageContent);
+    toggleNavButtonActive(btn);
 }
 
-function updateNavBar(btn) {
+function toggleNavButtonActive(btn) {
+    if (btn === null) return;
+
     if (activeBtn !== null) {
         activeBtn.classList.remove("nav-item-active");
     }
@@ -39,5 +57,8 @@ function updateNavBar(btn) {
     activeBtn = btn;
 }
 
-// initial load of home page
-load(home, homeBtn);
+function createSection(content) {
+    const section = document.createElement("section");
+    section.innerHTML = content;
+    return section;
+}

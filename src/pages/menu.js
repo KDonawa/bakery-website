@@ -1,8 +1,4 @@
-function loadMenu(container) {
-    container.innerHTML = getMenuPage();
-}
-
-function getMenuPage() {
+export default function getMenuPage() {
     return `
         <div class="menu-banner">
             <h1 class="menu-banner-title">MENU</h1>
@@ -96,5 +92,3 @@ function getMenuPage() {
         </section>
     `;
 }
-
-export default loadMenu;

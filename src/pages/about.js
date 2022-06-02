@@ -1,8 +1,4 @@
-function loadAbout(container) {
-    container.innerHTML = getAboutPage();
-}
-
-function getAboutPage() {
+export default function getAboutPage() {
     return `
         <div class="about-banner">
             <h1 class="about-banner-title">ABOUT US</h1>
@@ -23,5 +19,3 @@ function getAboutPage() {
         </section>
     `;
 }
-
-export default loadAbout;

@@ -1,8 +1,4 @@
-function loadContact(container) {
-    container.innerHTML = getContactPage();
-}
-
-function getContactPage() {
+export default function getContactPage() {
     return `
         <div class="contact-banner">
             <h1 class="contact-banner-title">CONTACT US</h1>
@@ -46,5 +42,3 @@ function getContactPage() {
         </section>
     `;
 }
-
-export default loadContact;
