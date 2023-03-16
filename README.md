@@ -1,4 +1,4 @@
-# Restaurant Page
+# Bakery Page
 
 [Live Demo](https://kdonawa.github.io/restaurant-page/) :point_left:
 
